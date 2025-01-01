@@ -80,7 +80,7 @@ How To Use This Module
     img_bw= image2bw(img_gray)
 
 
-    print img.shape
+    print(img.shape)
     image2text(img,(80,40))
     image2text(img,(80,40))
 

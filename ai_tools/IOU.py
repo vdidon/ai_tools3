@@ -32,7 +32,7 @@ def IOU(Reframe=[],GTframe=[]):
         Area2 = width2*height2
         ratio = Area*1./(Area1+Area2-Area)
     # return IOU
-    print "IOU=%f"%(ratio)
-    print Reframe
-    print GTframe
+    print("IOU=%f"%(ratio))
+    print(Reframe)
+    print(GTframe)
     return ratio#,Reframe,GTframe

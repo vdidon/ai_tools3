@@ -5,11 +5,11 @@ import sys
 def roc(standard_path="truth",test_path="test",result_roc='result_roc.txt'):
 
     db=[]
-    print "analyze_xml:"
+    print("analyze_xml:")
     db,pos=Analyze_xml(standard_path,test_path)
     db = sorted(db, key=lambda x:x[2], reverse=True)#sorted() 
     
-    print pos 
+    print(pos)
     xy_arr = []
     tp,fp = 0., 0.			
     for i in range(len(db)):
@@ -59,7 +59,7 @@ def Analyze_score_vector(score_vector):
     with open(score_vector) as fh:
         for lines in fh.readlines():
             line=lines.strip('\n').split(' ')
-            print line
+            print(line)
             score=float(line[1])
             sample_type=float(line[0])
             if float(sample_type)==1:
@@ -72,12 +72,12 @@ def Analyze_score_vector(score_vector):
 def roc_score_matrix(score_vector="score_vector.txt",result_roc='result_roc.txt',result_IOU='result_IOU'):
 
     db=[]
-    print "analyze_xml:"
+    print("analyze_xml:")
     #db,pos=Analyze_xml(standard_path,test_path)
     db,pos=Analyze_score_vector(score_vector)
     db = sorted(db, key=lambda x:x[2], reverse=True)#sorted() 
     
-    print pos 
+    print(pos)
     xy_arr = []
     tp,fp = 0., 0.			
     for i in range(len(db)):
@@ -112,8 +112,8 @@ def roc_score_matrix(score_vector="score_vector.txt",result_roc='result_roc.txt'
 def main_1(gt_dir,resultdir):
     #gt_dir=sys.argv[1]
     #resultdir=sys.argv[2]
-    print gt_dir
-    print resultdir
+    print(gt_dir)
+    print(resultdir)
     roc(gt_dir,resultdir,'result_roc.txt')
 
 def main_2():

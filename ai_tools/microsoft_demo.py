@@ -71,5 +71,5 @@ img_url2 = '/data1/mingmingzhao/label/data_sets_teacher_1w/47017613_1510574400_o
 #print(ms_face_detect(img_url))
 CF=init()
 cl=ms_face_verify(CF,img_url,img_url2)
-print cl
+print(cl)
 

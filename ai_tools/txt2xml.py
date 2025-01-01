@@ -35,7 +35,7 @@ def txt2xml(xmlfilename,txtfilename):
                     nodeManager.appendChild(nodeYmax)
                     root.appendChild(nodeManager)
 
-            print line[0]
+            print(line[0])
             #pathn=os.path.join(after_file,line[0])
             #pathn=os.path.join(pathn,".xml")
             #pathn+=".xml"
@@ -81,13 +81,13 @@ def Transform_txt_xml(pre_file='txt_file',after_file='xml_file'):
                     nodeManager.appendChild(nodeYmax)
                     root.appendChild(nodeManager)
     
-            print line[0]
+            print(line[0])
             pathn=os.path.join(after_file,line[0])
             #pathn=os.path.join(pathn,".xml")
             pathn+=".xml"
             fp = open(pathn, 'w')
             doc.writexml(fp, indent='\t', addindent='\t', newl='\n', encoding="utf-8")
-    print 'Transform_txt_xml() is OK'
+    print('Transform_txt_xml() is OK')
         
 if __name__ == '__main__':
     Transform_txt_xml()

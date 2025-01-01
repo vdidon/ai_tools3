@@ -14,7 +14,7 @@ def predict(img_dir,reusltdir):
         list1=[]
         name=xmlFile[:-4]
         imf=os.path.join(img_dir,xmlFile)
-        print imf
+        print(imf)
         image=cv2.imread(imf)
 
         num,list1,time=fd1.detect_face(image)
@@ -26,9 +26,9 @@ def predict(img_dir,reusltdir):
             for i in range(num):
                 list2=str(list1[i])
                 list2=list2[1:-1]
-                print list2
+                print(list2)
                 fp.write("%s " % list2)
-    print 'vcvf_txt() is OK'
+    print('vcvf_txt() is OK')
 
 if __name__ == '__main__':
     img_dir="D:\zmm\moba\home\intern_mission\\bndbox_test2\\bndbox_test\\vcvf_txt\pre_file"

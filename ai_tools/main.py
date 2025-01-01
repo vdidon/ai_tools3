@@ -21,7 +21,7 @@ def predict(img_dir,reusltdir):
         list1=[]
         name=xmlFile[:-4]
         imf=os.path.join(img_dir,xmlFile)
-        print imf
+        print(imf)
         image=cv2.imread(imf)
 
         num,list1,time=fd1.detect_face(image)
@@ -34,7 +34,7 @@ def predict(img_dir,reusltdir):
             for i in range(num):
                 list2=str(list1[i])
                 list2=list2[1:-1]
-                print list2
+                print(list2)
                 fp.write("%s " % list2)
         xmlfilename=pathn
         txt2xml(txtfile,xmlfilename) 
@@ -49,7 +49,7 @@ def txt2xml(xmlfilename,txtfilename):
 
             str=fs.read()
             line=str.split()
-            print line
+            print(line)
             for i in range(0,int(line[1])):
                 managerList.append([{'xmin':line[2+i*4],'ymin':line[3+i*4],'xmax':line[4+i*4],'ymax':line[5+i*4]}])
 
@@ -72,7 +72,7 @@ def txt2xml(xmlfilename,txtfilename):
                     nodeManager.appendChild(nodeYmax)
                     root.appendChild(nodeManager)
 
-            print line[0]
+            print(line[0])
             #pathn=os.path.join(after_file,line[0])
             #pathn=os.path.join(pathn,".xml")
             #pathn+=".xml"
