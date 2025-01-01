@@ -11,7 +11,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
-    python_requires='>=3',
+    python_requires='>=3.6',
     install_requires=[
         'numpy',
         'opencv-python',
@@ -21,6 +21,13 @@ setup(
         'scikit-image',
         'DBUtils',
         'mysqlclient',  # Version Python 3 de MySQLdb
+        'cognitive-face>=1.5.0',  # Pour l'API Microsoft Face
+        'pandas',  # Pour le traitement des données
+        'matplotlib',  # Pour pylab
+        'scikit-learn',  # Pour sklearn
+        'vcvf',  # Pour face_detector
+        'vcvf_emotion',  # Pour face_emotion
+        'zprint'
     ],
     extras_require={
         'dev': ['check-manifest'],
